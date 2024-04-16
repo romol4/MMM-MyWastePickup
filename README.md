@@ -9,7 +9,7 @@ This displays your schedule for Toronto curbside waste pickup. Forked from [jcla
 
 ## Installation
 1. Navigate into your MagicMirror `modules` folder and execute<br>
-`git clone https://github.com/jclarke0000/MMM-MyWastePickup.git`.
+`git clone https://github.com/romol4/MMM-MyWastePickup.git`.
 2. Enter the new `MMM-MyWastePickup` directory and execute `npm install`.
 
 ## Configuration
