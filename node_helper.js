@@ -57,10 +57,10 @@ module.exports = NodeHelper.create({
       //So we do a check for the format first and convert to a Moment object
       //accordingly, while maintaining compatibility for people using the
       //custom calendar
-      if (obj.WeekStarting.indexOf("/") != -1 ) {
-        obj.pickupDate = moment(obj.WeekStarting, "MM/DD/YY");
-      } else if (obj.WeekStarting.indexOf("-") != -1 ) {
-        obj.pickupDate = moment(obj.WeekStarting, "YYYY-MM-DD");
+      if (obj.CollectionDate.indexOf("/") != -1 ) {
+        obj.pickupDate = moment(obj.CollectionDate, "MM/DD/YY");
+      } else if (obj.CollectionDate.indexOf("-") != -1 ) {
+        obj.pickupDate = moment(obj.CollectionDate, "YYYY-MM-DD");
       }
 
       // to do:
@@ -83,7 +83,7 @@ module.exports = NodeHelper.create({
 
     //find info for next pickup dates
     var nextPickups = this.schedule.filter(function (obj) {
-      return obj.Calendar == payload.collectionCalendar &&
+      return obj.Schedule == payload.collectionCalendar &&
         obj.pickupDate.isSameOrAfter(start) && 
         obj.pickupDate.isBefore(end);
     });
